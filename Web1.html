@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <title>ССылки они везде ссылки</title>
+    <meta charset="UTF-8">
+    <title>Ссылки они везде ссылки</title>
 </head>
-
 <body>
-    <h1>Маркированный список гиперссылок</h1>  
-    <ul> 
+    <h1>Маркированный список гиперссылок</h1>
+    <ul>
         <li><a href="http://kubsu.ru">Ссылка 1: Абсолютная на главную страницу kubsu.ru (HTTP)</a></li>
         <li><a href="https://kubsu.ru">Ссылка 2: Абсолютная на главную страницу kubsu.ru (HTTPS)</a></li>
-        <li><a href="/internal-page">Ссылка 4: Сокращённая на внутреннюю страницу</a></li>
+        <li><a href="https://example.com"><img src="D:\Important\ВУЗ\WEB\web1\1\imageWeb.jpg" alt="Цветок" style="width: 600px;"></a>Ссылка 3: С изображением</li>
+        <li><a href="ru/abiturient">Ссылка 4: Сокращённая на внутреннюю страницу</a></li>
         <li><a href="/">Ссылка 5: Сокращённая на главную страницу</a></li>
         <li><a href="#fragment">Ссылка 6: На фрагмент текущей страницы</a></li>
         <li><a href="/search?param1=value1&param2=value2&param3=value3">Ссылка 7: С тремя параметрами в URL</a></li>
@@ -21,10 +21,18 @@
         <li><a href="../../grandparent-page.html">Ссылка 12: Относительная на страницу в каталоге двумя уровнями выше</a></li>
         <li>Ссылка 13: Контекстная в тексте абзаца: Этот <a href="https://kubsu.ru">университет</a> находится в Краснодаре.</li>
         <li><a href="https://kubsu.ru#section">Ссылка 14: На фрагмент страницы стороннего сайта</a></li>
+        <li>
+            Ссылка 15: Ссылки из прямоугольных и круглых областей картинки<br>
+            <img src="image.jpg" alt="Карта ссылок" usemap="#imageMap" style="width: 600px;">
+            <map name="imageMap">
+                <area shape="rect" coords="50,50,200,150" href="https://kubsu.ru" alt="Прямоугольная область" title="Перейти на kubsu.ru">
+                <area shape="circle" coords="300,100,50" href="https://example.com" alt="Круглая область" title="Перейти на example.com">
+            </map>
+        </li>
         <li><a href="">Ссылка 16: С пустым href</a></li>
         <li><a>Ссылка 17: Без href</a></li>
         <li><a href="https://kubsu.ru" rel="nofollow">Ссылка 18: Запрещена для перехода поисковикам</a></li>
-        <li><a href="https://kubsu.ru" rel="noindex">Ссылка 19: Запрещена для индексации поисковиками</a></li>
+        <li><a href="https://kubsu.ru" rel="noindex">Ссылка 19: запрещенную для индексации поисковиками</a></li>
         <li>
             Ссылка 20: Нумерованный список ссылок с атрибутом title<br>
             <ol>
@@ -35,34 +43,35 @@
         </li>
         <li><a href="ftp://user:password@ftp.example.com/file.txt">Ссылка 21: На файл на FTP-сервере с авторизацией</a></li>
     </ul>
-        <h2>Форма обратной связи</h2>
-        <form id="fragment" class="fragment" action="/submit" method="post">
-            <!-- ФИО -->
+
+    <h2>Форма обратной связи</h2>
+    <form id="fragment" class="fragment" action="/submit" method="post">
+        <!-- ФИО -->
         <label for="fullName">ФИО:</label><br>
-        <input type="text" id="fullName" name="fullName" placeholder="Введите ваше ФИО" required><br><br>
+        <input type="text" id="fullName" name="fullName" value="Введите ваше ФИО"><br><br>
 
         <!-- Телефон -->
         <label for="phone">Телефон:</label><br>
-        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" pattern="\+?[0-9\s\-\(\)]{10,15}" required><br><br>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67"><br><br>
 
-        <!-- Email -->
+        <!-- Почта -->
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Введите ваш email" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Введите ваш email"><br><br>
 
         <!-- Дата рождения -->
         <label for="birthDate">Дата рождения:</label><br>
-        <input type="date" id="birthDate" name="birthDate" required><br><br>
+        <input type="date" id="birthDate" name="birthDate"><br><br>
 
         <!-- Пол -->
         <label>Пол:</label><br>
-        <input type="radio" id="male" name="gender" value="male" required>
+        <input type="radio" id="male" name="gender" value="male" checked>
         <label for="male">Мужской</label>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Женский</label><br><br>
 
         <!-- Любимый язык программирования -->
         <label for="programmingLanguages">Любимый язык программирования:</label><br>
-        <select id="programmingLanguages" name="programmingLanguages" multiple size="5" required>
+        <select id="programmingLanguages" name="programmingLanguages" multiple size="5">
             <option value="Pascal">Pascal</option>
             <option value="C">C</option>
             <option value="C++">C++</option>
@@ -78,13 +87,14 @@
 
         <!-- Биография -->
         <label for="biography">Биография:</label><br>
-        <textarea id="biography" name="biography" rows="5" placeholder="Расскажите о себе" required></textarea><br><br>
+        <textarea id="biography" name="biography" rows="5" placeholder="Расскажите о себе"></textarea><br><br>
 
         <!-- Чекбокс -->
-        <input type="checkbox" id="contract" name="contract" required>
+        <input type="checkbox" id="contract" name="contract">
         <label for="contract">С контрактом ознакомлен(а)</label><br><br>
 
         <!-- Кнопка -->
         <button type="submit">Сохранить</button>
-        </form>
+    </form>
 </body>
+</html>
