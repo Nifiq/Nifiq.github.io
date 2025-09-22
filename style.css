@@ -1,0 +1,32 @@
+#logo {
+    width: 100px;
+    color: #FF0000;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+}
+logo {
+    style ="width:100px; background-color:#ccc; margin:50px; padding:50px;"> <span style="background-color:red;">Контент</span>
+}
+h1 {
+    style ="max-width:960px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;">
+}
+#call-widget {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+header {
+    style ="width:100%; background-color:#ccc; padding: 10px; height:120px;";
+}
+
+div#center {
+
+}
+nav{
+
+}
+footer {
+    style ="width:100%; background-color:#ccc; padding: 10px; height:120px;"
+}
