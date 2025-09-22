@@ -1,32 +1,122 @@
-#logo {
-    width: 100px;
-    color: #FF0000;
-    height: 100px;
-    float: left;
-    margin-right: 10px;
-    text-decoration: none;
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #333;
 }
-logo {
-    style ="width:100px; background-color:#ccc; margin:50px; padding:50px;"> <span style="background-color:red;">�������</span>
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-h1 {
-    style ="max-width:960px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;">
-}
-#call-widget {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
+
+/* Шапка */
 header {
-    style ="width:100%; background-color:#ccc; padding: 10px; height:120px;";
+    width: 100%;
+    background: #cdd6e0;
+    padding: 10px 0;
 }
 
-div#center {
-
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-nav{
 
+/* Логотип */
+.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #5a7d9a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-left: 0;
 }
+
+/* Меню */
+nav {
+    flex-grow: 1;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #444;
+}
+
+/* Заголовок сайта */
+.site-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 26px;
+    color: #000;
+}
+
+/* Таблица — оставляем без изменений */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+
+.styled-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.styled-table tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+.styled-table th {
+    background: #5a7d9a;
+    color: white;
+}
+
+button {
+    background: #5a7d9a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #466078;
+}
+
+/* Подвал */
 footer {
-    style ="width:100%; background-color:#ccc; padding: 10px; height:120px;"
+    width: 100%;
+    background: #5a7d9a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
 }
