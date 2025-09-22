@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Ссылки они везде ссылки</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Мой сайт</title>
 </head>
 <body>
     <h1>Маркированный список гиперссылок</h1>
@@ -43,58 +44,95 @@
         </li>
         <li><a href="ftp://user:password@ftp.example.com/file.txt">Ссылка 21: На файл на FTP-сервере с авторизацией</a></li>
     </ul>
+    <h2>Таблица</h2>
+    <table>
+        <tr>
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
+            <th>Колонка 4</th>
+            <th>Колонка 5</th>
+        </tr>
+        <tr>
+            <td colspan="2">Ячейка 11 объединенная с 12</td>
+            <td colspan="3">Ячейка 13 объединенная с 14</td>
+        </tr>
+        <tr>
+            <td>Ячейка 21</td>
+            <td>Ячейка 22</td>
+            <td>Ячейка 23</td>
+        </tr>
+        <tr>
+            <td>Ячейка 31</td>
+            <td>Ячейка 32</td>
+            <td>Ячейка 33</td>
+        </tr>
+        <tr>
+            <td>Ячейка 41</td>
+            <td>Ячейка 42</td>
+            <td>Ячейка 43</td>
+            <td>Ячейка 43</td>
+        </tr>
+        <tr>
+            <td>Ячейка 51</td>
+            <td>Ячейка 52</td>
+        </tr>
+        <tr>
+            <td>Ячейка 61</td>
+            <td>Ячейка 62</td>
+        </tr>
+    </table>
+     <h3>Форма обратной связи</h3>
+        <form id="fragment" class="fragment" action="/submit" method="post">
+            <!-- ФИО -->
+            <label for="fullName">ФИО:</label><br>
+            <input type="text" id="fullName" name="fullName" value="Введите ваше ФИО"><br><br>
 
-    <h2>Форма обратной связи</h2>
-    <form id="fragment" class="fragment" action="/submit" method="post">
-        <!-- ФИО -->
-        <label for="fullName">ФИО:</label><br>
-        <input type="text" id="fullName" name="fullName" value="Введите ваше ФИО"><br><br>
+            <!-- Телефон -->
+            <label for="phone">Телефон:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67"><br><br>
 
-        <!-- Телефон -->
-        <label for="phone">Телефон:</label><br>
-        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67"><br><br>
+            <!-- Почта -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email"><br><br>
 
-        <!-- Почта -->
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Введите ваш email"><br><br>
+            <!-- Дата рождения -->
+            <label for="birthDate">Дата рождения:</label><br>
+            <input type="date" id="birthDate" name="birthDate"><br><br>
 
-        <!-- Дата рождения -->
-        <label for="birthDate">Дата рождения:</label><br>
-        <input type="date" id="birthDate" name="birthDate"><br><br>
+            <!-- Пол -->
+            <label>Пол:</label><br>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женский</label><br><br>
 
-        <!-- Пол -->
-        <label>Пол:</label><br>
-        <input type="radio" id="male" name="gender" value="male" checked>
-        <label for="male">Мужской</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Женский</label><br><br>
+            <!-- Любимый язык программирования -->
+            <label for="programmingLanguages">Любимый язык программирования:</label><br>
+            <select id="programmingLanguages" name="programmingLanguages" multiple size="5">
+                <option value="Pascal">Pascal</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Haskell">Haskell</option>
+                <option value="Clojure">Clojure</option>
+                <option value="Prolog">Prolog</option>
+                <option value="Scala">Scala</option>
+            </select><br><br>
 
-        <!-- Любимый язык программирования -->
-        <label for="programmingLanguages">Любимый язык программирования:</label><br>
-        <select id="programmingLanguages" name="programmingLanguages" multiple size="5">
-            <option value="Pascal">Pascal</option>
-            <option value="C">C</option>
-            <option value="C++">C++</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="PHP">PHP</option>
-            <option value="Python">Python</option>
-            <option value="Java">Java</option>
-            <option value="Haskell">Haskell</option>
-            <option value="Clojure">Clojure</option>
-            <option value="Prolog">Prolog</option>
-            <option value="Scala">Scala</option>
-        </select><br><br>
+            <!-- Биография -->
+            <label for="biography">Биография:</label><br>
+            <textarea id="biography" name="biography" rows="5" placeholder="Расскажите о себе"></textarea><br><br>
 
-        <!-- Биография -->
-        <label for="biography">Биография:</label><br>
-        <textarea id="biography" name="biography" rows="5" placeholder="Расскажите о себе"></textarea><br><br>
+            <!-- Чекбокс -->
+            <input type="checkbox" id="contract" name="contract">
+            <label for="contract">С контрактом ознакомлен(а)</label><br><br>
 
-        <!-- Чекбокс -->
-        <input type="checkbox" id="contract" name="contract">
-        <label for="contract">С контрактом ознакомлен(а)</label><br><br>
-
-        <!-- Кнопка -->
-        <button type="submit">Сохранить</button>
-    </form>
+            <!-- Кнопка -->
+            <button type="submit">Сохранить</button>
+        </form>
 </body>
 </html>
